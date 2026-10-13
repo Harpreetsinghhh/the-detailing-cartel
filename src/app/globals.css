@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@theme{--color-neon:#B7FF00;--color-neon2:#A3E600;--color-ink:#090A09;--color-char:#121412;--color-card:#171A17;--color-line:#292D28;--color-silver:#B8BDB7;--color-mute:#858B83;--font-sans:var(--font-ins),Inter,system-ui,sans-serif}
+html{background:#090A09;scroll-padding-top:80px;scroll-behavior:smooth;overflow-x:clip}
+body{min-width:320px;color:#B8BDB7;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,iframe{max-width:100%}
+address{overflow-wrap:anywhere}
+.section-space{padding-block:clamp(4rem,7vw,6.5rem)}
+.map-panel{overflow:hidden}
+.map-frame{display:block;width:100%;height:clamp(300px,34vw,440px);margin:0;border:0;vertical-align:top}
+:focus-visible{outline:2px solid #B7FF00;outline-offset:3px}
+.display{font-weight:700;letter-spacing:-.04em;line-height:.92;text-transform:uppercase;color:#fff;overflow-wrap:anywhere}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq{animation:mq 28s linear infinite}
+@media(max-width:639px){
+  html{scroll-padding-top:72px}
+  .display{letter-spacing:-.045em}
+}
+@media (prefers-reduced-motion:reduce){.mq{animation:none}html{scroll-behavior:auto}}
